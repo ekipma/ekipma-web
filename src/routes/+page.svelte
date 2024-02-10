@@ -14,7 +14,7 @@
 	<div class="content">
 		<h1>اکیپما اینجاست تا برای اکیپتون کلی کارای باحال انجام بده</h1>
 		<div class="row gap-1">
-			<a class="btn" href="https://cdn.ekipma.ir/ekipma.apk">
+			<a class="btn" href="https://cdn.ekipma.ir/files/ekipma.apk">
 				<img alt="android" src={android} class="icon-image-sm" />
 				<span>دانلود اندروید</span>
 			</a>
@@ -32,12 +32,6 @@
 			src="$lib/images/phones.avif?w=1280;640;400"
 			sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
 		/>
-		<!-- <enhanced:img
-			class="phone-1"
-			alt="ekipma payments"
-			src="$lib/images/phone-0.avif?w=1280;640;400"
-			sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
-		/> -->
 	</div>
 </section>
 
