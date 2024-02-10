@@ -1,5 +1,5 @@
 <script lang="ts">
-	import phone0 from '$lib/images/phone-0.png';
+	import phone0 from '$lib/images/phone-0.avif';
 	import android from '$lib/images/android.svg';
 	import apple from '$lib/images/apple.svg';
 </script>
@@ -27,8 +27,8 @@
 	</div>
 	<div class="mockup">
 		<div class="ambient-light" />
-		<img class="phone-0" alt="ekipma payments" src={phone0} />
-		<img class="phone-1" alt="ekipma payments" src={phone0} />
+		<enhanced:img class="phone-0" alt="ekipma payments" src={phone0} />
+		<enhanced:img class="phone-1" alt="ekipma payments" src={phone0} />
 	</div>
 </section>
 
