@@ -4,9 +4,9 @@
 
 <footer>
 	<nav class="row">
-		<a href="/terms">قوانین</a>
-		<a href="/privacy">حریم خصوصی</a>
-		<a href="/contact">ارتباط با ما</a>
+		<a href="/">قوانین</a>
+		<a href="/">حریم خصوصی</a>
+		<a href="/">ارتباط با ما</a>
 		<a href="https://github.com/ekipma">گیت هاب</a>
 		<div class="spacer" />
 		<a href="https://github.com">
