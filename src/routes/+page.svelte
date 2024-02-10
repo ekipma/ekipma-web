@@ -27,8 +27,18 @@
 	</div>
 	<div class="mockup">
 		<div class="ambient-light" />
-		<enhanced:img class="phone-0" alt="ekipma payments" src={phone0} />
-		<enhanced:img class="phone-1" alt="ekipma payments" src={phone0} />
+		<enhanced:img
+			class="phone-0"
+			alt="ekipma payments"
+			src="$lib/images/phone-0.avif?w=1280;640;400"
+			sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+		/>
+		<enhanced:img
+			class="phone-1"
+			alt="ekipma payments"
+			src="$lib/images/phone-0.avif?w=1280;640;400"
+			sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+		/>
 	</div>
 </section>
 
@@ -72,19 +82,19 @@
 		opacity: 0.18;
 	}
 
-	.mockup img {
+	picture {
+		display: contents;
+	}
+
+	.phone-0,
+	.phone-1 {
 		height: 28vw;
-	}
-
-	img.phone-0 {
 		position: absolute;
 		width: auto;
+	}
+
+	.phone-0 {
 		transform: translateX(10vw) scale(0.75);
-	}
-
-	img.phone-1 {
-		position: absolute;
-		width: auto;
 	}
 
 	@media screen and (max-width: 800px) {
@@ -93,23 +103,26 @@
 			margin-bottom: 5rem;
 		}
 
-		.mockup img {
-			height: 60vw;
+		.phone-0 {
+			display: none;
 		}
 
-		img.phone-0 {
-			display: none;
+		.phone-0,
+		.phone-1 {
+			height: 60vw;
 		}
 	}
 
 	@media screen and (max-width: 750px) {
-		.mockup img {
+		.phone-0,
+		.phone-1 {
 			height: 75vw;
 		}
 	}
 
 	@media screen and (max-width: 500px) {
-		.mockup img {
+		.phone-0,
+		.phone-1 {
 			height: 100vw;
 		}
 	}
