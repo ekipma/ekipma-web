@@ -1,5 +1,5 @@
 <script lang="ts">
-	import phone0 from '$lib/images/phone-0.avif';
+	import phone0 from '$lib/images/phone-0.avif?enhanced';
 	import android from '$lib/images/android.svg';
 	import apple from '$lib/images/apple.svg';
 </script>
