@@ -1,0 +1,143 @@
+@import 'fonts.css';
+@import '@fontsource/fira-mono';
+
+:root {
+	--font-body: 'Vazirmatn', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-mono: 'Fira Mono', monospace;
+	--color-bg-0: #000000;
+	--color-bg-1: #000512;
+	--color-bg-2: #001205;
+	--color-bg-3: #120800;
+	--color-fg-1: #e9438c;
+	--color-fg-2: #00bcd4;
+	--color-fg-3: #2ebf91;
+	--color-primary: #a18fff;
+	--color-text: rgba(256, 256, 256, 0.7);
+	--column-width: 42rem;
+	--column-margin-top: 4rem;
+	--padding-h: 5rem;
+	font-family: var(--font-body);
+	color: var(--color-text);
+}
+
+@media screen and (max-width: 1000px) {
+	:root {
+		--padding-h: 2rem;
+	}
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	background-attachment: fixed;
+	background-color: var(--color-bg-0);
+	background-size: 100vw 100vh;
+	direction: rtl;
+}
+
+* {
+	/* border: 1px solid #fff2; */
+}
+
+h1,
+h2,
+p {
+	font-weight: 400;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: var(--color-text);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1rem;
+}
+
+pre {
+	font-size: 16px;
+	font-family: var(--font-mono);
+	background-color: rgba(255, 255, 255, 0.45);
+	border-radius: 3px;
+	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
+	padding: 0.5em;
+	overflow-x: auto;
+	color: var(--color-text);
+}
+
+.text-column {
+	display: flex;
+	max-width: 48rem;
+	flex: 0.6;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+input,
+button,
+.btn {
+	font-size: inherit;
+	font-family: inherit;
+	border-radius: 2rem;
+	background-color: var(--color-primary);
+	color: var(--color-bg-0);
+	border: none;
+	padding: 0.5rem 1.25rem;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
+
+@media (min-width: 720px) {
+	h1 {
+		font-size: 2.4rem;
+	}
+}
+
+.spacer {
+	flex: 1;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.gap-1 {
+	gap: 1rem;
+}
+
+.icon-image {
+	height: 2rem;
+	width: auto;
+}
+
+.icon-image-sm {
+	height: 1.85rem;
+	width: auto;
+}

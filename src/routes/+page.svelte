@@ -1,59 +1,116 @@
-<script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+<script lang="ts">
+	import phone0 from '$lib/images/phone-0.png';
+	import android from '$lib/images/android.svg';
+	import apple from '$lib/images/apple.svg';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title
+		>اکیپــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</title
+	>
+	<meta name="description" content="برای اکیپ ما" />
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+	<div class="content">
+		<h1>اکیپما اینجاست تا برای اکیپتون کلی کارای باحال انجام بده</h1>
+		<div class="row gap-1">
+			<a class="btn" href="https://cdn.ekipma.ir/ekipma.apk">
+				<img alt="android" src={android} class="icon-image-sm" />
+				<span>دانلود اندروید</span>
+			</a>
+			<button>
+				<img alt="android" src={apple} class="icon-image-sm" />
+				<span>دانلود آیفون</span>
+			</button>
+		</div>
+	</div>
+	<div class="mockup">
+		<div class="ambient-light" />
+		<img class="phone-0" alt="ekipma payments" src={phone0} />
+		<img class="phone-1" alt="ekipma payments" src={phone0} />
+	</div>
 </section>
 
 <style>
 	section {
+		flex: 1;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap-reverse;
+		justify-content: space-between;
+		align-items: center;
+
+		container-type: inline-size;
+		container: home-section;
+	}
+
+	.content {
+		flex: 0 0 50%;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		gap: 2rem;
+		max-width: 30rem;
+	}
+
+	.mockup {
+		flex: 0 0 40%;
+		display: flex;
 		align-items: center;
-		flex: 0.6;
+		justify-content: center;
+		min-height: 25rem;
 	}
 
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
+	.ambient-light {
 		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+		z-index: 0;
+		height: 60rem;
+		width: 60rem;
+		background: radial-gradient(circle at center, var(--color-primary) 0, #fff0 50%);
+		border-radius: 50%;
+		transform: translate(-0rem, -5rem);
+		opacity: 0.18;
+	}
+
+	.mockup img {
+		height: 28vw;
+	}
+
+	img.phone-0 {
+		position: absolute;
+		width: auto;
+		transform: translateX(10vw) scale(0.75);
+	}
+
+	img.phone-1 {
+		position: absolute;
+		width: auto;
+	}
+
+	@media screen and (max-width: 800px) {
+		section > * {
+			flex: 0 0 100% !important;
+			margin-bottom: 5rem;
+		}
+
+		.mockup img {
+			height: 60vw;
+		}
+
+		img.phone-0 {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		.mockup img {
+			height: 75vw;
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		.mockup img {
+			height: 100vw;
+		}
 	}
 </style>
