@@ -1,5 +1,4 @@
 <script lang="ts">
-	import phone0 from '$lib/images/phone-0.avif?enhanced';
 	import android from '$lib/images/android.svg';
 	import apple from '$lib/images/apple.svg';
 </script>
@@ -28,17 +27,17 @@
 	<div class="mockup">
 		<div class="ambient-light" />
 		<enhanced:img
-			class="phone-0"
+			class="phones"
 			alt="ekipma payments"
-			src="$lib/images/phone-0.avif?w=1280;640;400"
+			src="$lib/images/phones.avif?w=1280;640;400"
 			sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
 		/>
-		<enhanced:img
+		<!-- <enhanced:img
 			class="phone-1"
 			alt="ekipma payments"
 			src="$lib/images/phone-0.avif?w=1280;640;400"
 			sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
-		/>
+		/> -->
 	</div>
 </section>
 
@@ -86,15 +85,10 @@
 		display: contents;
 	}
 
-	.phone-0,
-	.phone-1 {
+	.phones {
 		height: 28vw;
 		position: absolute;
 		width: auto;
-	}
-
-	.phone-0 {
-		transform: translateX(10vw) scale(0.75);
 	}
 
 	@media screen and (max-width: 800px) {
@@ -103,26 +97,19 @@
 			margin-bottom: 5rem;
 		}
 
-		.phone-0 {
-			display: none;
-		}
-
-		.phone-0,
-		.phone-1 {
+		.phones {
 			height: 60vw;
 		}
 	}
 
 	@media screen and (max-width: 750px) {
-		.phone-0,
-		.phone-1 {
+		.phones {
 			height: 75vw;
 		}
 	}
 
 	@media screen and (max-width: 500px) {
-		.phone-0,
-		.phone-1 {
+		.phones {
 			height: 100vw;
 		}
 	}
